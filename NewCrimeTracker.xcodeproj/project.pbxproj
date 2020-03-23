@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		D05B4ECD2415968500E070DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05B4ECC2415968500E070DA /* AppDelegate.swift */; };
 		D05B4ECF2415968500E070DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05B4ECE2415968500E070DA /* SceneDelegate.swift */; };
-		D05B4ED12415968500E070DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05B4ED02415968500E070DA /* ViewController.swift */; };
-		D05B4ED42415968500E070DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D05B4ED22415968500E070DA /* Main.storyboard */; };
+		D05B4ED12415968500E070DA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05B4ED02415968500E070DA /* MainViewController.swift */; };
 		D05B4ED62415968700E070DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D05B4ED52415968700E070DA /* Assets.xcassets */; };
 		D05B4ED92415968700E070DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D05B4ED72415968700E070DA /* LaunchScreen.storyboard */; };
+		D05B4EE12415A02600E070DA /* CTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05B4EE02415A02600E070DA /* CTButton.swift */; };
+		D05B4EE32416CD8B00E070DA /* CityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05B4EE22416CD8B00E070DA /* CityVC.swift */; };
+		D05B4EE52419A46900E070DA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05B4EE42419A46900E070DA /* Constants.swift */; };
+		D05B4EE7241D4F8700E070DA /* CTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05B4EE6241D4F8700E070DA /* CTTableViewCell.swift */; };
+		D0A1D3782426DB79001C93D4 /* CTModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A1D3772426DB79001C93D4 /* CTModel.swift */; };
+		D0A1D37A2426DBBD001C93D4 /* CTNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A1D3792426DBBD001C93D4 /* CTNetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D05B4EC92415968500E070DA /* NewCrimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewCrimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D05B4ECC2415968500E070DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D05B4ECE2415968500E070DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D05B4ED02415968500E070DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D05B4ED32415968500E070DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D05B4ED02415968500E070DA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D05B4ED52415968700E070DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D05B4ED82415968700E070DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D05B4EDA2415968700E070DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D05B4EE02415A02600E070DA /* CTButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTButton.swift; sourceTree = "<group>"; };
+		D05B4EE22416CD8B00E070DA /* CityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityVC.swift; sourceTree = "<group>"; };
+		D05B4EE42419A46900E070DA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D05B4EE6241D4F8700E070DA /* CTTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTTableViewCell.swift; sourceTree = "<group>"; };
+		D0A1D3772426DB79001C93D4 /* CTModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTModel.swift; sourceTree = "<group>"; };
+		D0A1D3792426DBBD001C93D4 /* CTNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTNetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +68,16 @@
 			children = (
 				D05B4ECC2415968500E070DA /* AppDelegate.swift */,
 				D05B4ECE2415968500E070DA /* SceneDelegate.swift */,
-				D05B4ED02415968500E070DA /* ViewController.swift */,
-				D05B4ED22415968500E070DA /* Main.storyboard */,
+				D05B4ED02415968500E070DA /* MainViewController.swift */,
+				D05B4EE22416CD8B00E070DA /* CityVC.swift */,
 				D05B4ED52415968700E070DA /* Assets.xcassets */,
 				D05B4ED72415968700E070DA /* LaunchScreen.storyboard */,
 				D05B4EDA2415968700E070DA /* Info.plist */,
+				D05B4EE02415A02600E070DA /* CTButton.swift */,
+				D05B4EE6241D4F8700E070DA /* CTTableViewCell.swift */,
+				D05B4EE42419A46900E070DA /* Constants.swift */,
+				D0A1D3772426DB79001C93D4 /* CTModel.swift */,
+				D0A1D3792426DBBD001C93D4 /* CTNetworkManager.swift */,
 			);
 			path = NewCrimeTracker;
 			sourceTree = "<group>";
@@ -127,7 +142,6 @@
 			files = (
 				D05B4ED92415968700E070DA /* LaunchScreen.storyboard in Resources */,
 				D05B4ED62415968700E070DA /* Assets.xcassets in Resources */,
-				D05B4ED42415968500E070DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +152,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D05B4ED12415968500E070DA /* ViewController.swift in Sources */,
+				D0A1D37A2426DBBD001C93D4 /* CTNetworkManager.swift in Sources */,
+				D0A1D3782426DB79001C93D4 /* CTModel.swift in Sources */,
+				D05B4EE12415A02600E070DA /* CTButton.swift in Sources */,
+				D05B4EE7241D4F8700E070DA /* CTTableViewCell.swift in Sources */,
+				D05B4ED12415968500E070DA /* MainViewController.swift in Sources */,
 				D05B4ECD2415968500E070DA /* AppDelegate.swift in Sources */,
 				D05B4ECF2415968500E070DA /* SceneDelegate.swift in Sources */,
+				D05B4EE32416CD8B00E070DA /* CityVC.swift in Sources */,
+				D05B4EE52419A46900E070DA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D05B4ED22415968500E070DA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D05B4ED32415968500E070DA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D05B4ED72415968700E070DA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
