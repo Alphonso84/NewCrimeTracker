@@ -12,7 +12,7 @@ import CoreLocation
 
 class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
    
-    //MARK:- Properties
+//MARK:- Properties
     let manager = CLLocationManager()
     var city = String()
     let logoImage = UIImageView()
@@ -25,11 +25,15 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
 //MARK:- View Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupLogoImage()
-        setupCrimeTrackerButton()
-        setupPickerView()
-        setupPoweredByImage()
+        logoImageSetup()
+        crimeTrackerButtonSetup()
+        pickerViewSetup()
+        poweredByImageSetup()
        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
 //MARK:-PickerView Methods
@@ -64,7 +68,7 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
        }
     
 //MARK:-Setup View Components
-    func setupPickerView() {
+    func pickerViewSetup() {
         view.addSubview(citySelection)
         citySelection.translatesAutoresizingMaskIntoConstraints = false
         citySelection.delegate = self
@@ -76,11 +80,10 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             citySelection.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
             citySelection.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30)
 ])
-        
     }
        
     
-    func setupLogoImage() {
+    func logoImageSetup() {
         view.addSubview(logoImage)
         logoImage.translatesAutoresizingMaskIntoConstraints = false
         logoImage.image = UIImage(named: "Icon")
@@ -93,7 +96,7 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     }
     
     
-    func setupCrimeTrackerButton() {
+    func crimeTrackerButtonSetup() {
         view.addSubview(crimeTrackerButton)
         crimeTrackerButton.addTarget(self, action: #selector(pushCityVC), for: .touchUpInside)
         crimeTrackerButton.translatesAutoresizingMaskIntoConstraints = false
@@ -105,7 +108,8 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         ])
     }
     
-    func setupPoweredByImage() {
+    
+    func poweredByImageSetup() {
         view.addSubview(poweredByImage)
         poweredByImage.translatesAutoresizingMaskIntoConstraints = false
         poweredByImage.image = UIImage(named: "Image")
