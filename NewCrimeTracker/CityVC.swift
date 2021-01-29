@@ -56,7 +56,6 @@ class CityVC: UIViewController, CLLocationManagerDelegate, UITableViewDelegate, 
     
     //MAP HELPER METHOD
     func cityMapShouldShow() ->CLLocation {
-        
         var cityToZoomTo = CLLocation()
         
         switch city {
@@ -96,7 +95,6 @@ class CityVC: UIViewController, CLLocationManagerDelegate, UITableViewDelegate, 
     
 //MARK:- TABLEVIEW SETUP
     func setupTableView() {
-        
         view.addSubview(tableView)
         tableView.rowHeight = 70
         tableView.translatesAutoresizingMaskIntoConstraints = false

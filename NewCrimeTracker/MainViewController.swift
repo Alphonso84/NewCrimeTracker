@@ -32,10 +32,6 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
        
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
 //MARK:-PickerView Methods
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -56,16 +52,23 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
 //MARK:- Push Next ViewController
     @objc func pushCityVC() {
         
-        //If city has a value, we assign city to the city variable in next viewController
+        //If city does not have a value, we display an alert and return from the method.
         guard !city.isEmpty else {
-               print("No City Selected")
-               return}
-           
-           let cityVC = CityVC()
+            print("No City Selected")
+            showAlert(title: "Alert", message:"Please Select A City First")
+            return
+        }
+        let cityVC = CityVC()
            cityVC.city = city
            navigationController?.pushViewController(cityVC, animated: true)
-           
        }
+//MARK:- Alert Methods
+    func showAlert(title: String, message:String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertController.addAction(action)
+        self.present(alertController, animated: true, completion: nil)
+    }
     
 //MARK:-Setup View Components
     func pickerViewSetup() {
@@ -82,7 +85,6 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
 ])
     }
        
-    
     func logoImageSetup() {
         view.addSubview(logoImage)
         logoImage.translatesAutoresizingMaskIntoConstraints = false
@@ -94,7 +96,6 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             logoImage.heightAnchor.constraint(equalToConstant: 250),
             logoImage.widthAnchor.constraint(equalToConstant: 250)])
     }
-    
     
     func crimeTrackerButtonSetup() {
         view.addSubview(crimeTrackerButton)
@@ -108,7 +109,6 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         ])
     }
     
-    
     func poweredByImageSetup() {
         view.addSubview(poweredByImage)
         poweredByImage.translatesAutoresizingMaskIntoConstraints = false
@@ -120,12 +120,10 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             poweredByImage.widthAnchor.constraint(equalToConstant: 250)])
     }
     
-    
     func returnUserLocation() -> CLLocationCoordinate2D {
         let userLocation = manager.location!.coordinate
         return userLocation
     }
-
-
+    
 }
 

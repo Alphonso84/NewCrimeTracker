@@ -16,10 +16,7 @@ class CTTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    
-//    func setupCrimeLabel() {
-//        NSLayoutConstraint.activate([crimeLabel.topAnchor.constraint(equalTo: , constant: )])
-//    }
+
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
