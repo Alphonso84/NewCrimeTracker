@@ -10,7 +10,6 @@ import UIKit
 
 class CTButton: UIButton {
 
-    
     override init(frame: CGRect) {
         super.init(frame:frame)
         configure()
@@ -32,5 +31,4 @@ class CTButton: UIButton {
         titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
         translatesAutoresizingMaskIntoConstraints = false
     }
-
 }

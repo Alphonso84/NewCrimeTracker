@@ -9,7 +9,6 @@
 import UIKit
 
 class CTTableViewCell: UITableViewCell {
-    
     var crimeLabel = UILabel()
 
     override func awakeFromNib() {
@@ -20,8 +19,6 @@ class CTTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
-
 }

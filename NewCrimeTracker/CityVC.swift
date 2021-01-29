@@ -122,6 +122,11 @@ class CityVC: UIViewController, CLLocationManagerDelegate, UITableViewDelegate, 
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //TODO:- Push to DetailView(Not yet Created)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return rowHeight
     }
