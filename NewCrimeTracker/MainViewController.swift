@@ -29,7 +29,6 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         crimeTrackerButtonSetup()
         pickerViewSetup()
         poweredByImageSetup()
-       
     }
     
 //MARK:-PickerView Methods
@@ -51,10 +50,8 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
 //MARK:- Push Next ViewController
     @objc func pushCityVC() {
-        
-        //If city does not have a value, we display an alert and return from the method.
+    //If city does not have a value, we display an alert and return from the method.
         guard !city.isEmpty else {
-            print("No City Selected")
             showAlert(title: "Alert", message:"Please Select A City First")
             return
         }
@@ -89,7 +86,6 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         view.addSubview(logoImage)
         logoImage.translatesAutoresizingMaskIntoConstraints = false
         logoImage.image = UIImage(named: "Icon")
-       
         NSLayoutConstraint.activate([
             logoImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80),
             logoImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
