@@ -55,7 +55,7 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             showAlert(title: "Alert", message:"Please Select A City First")
             return
         }
-        //gfhgfkjhglhglkgljhgkhgfhjgfdjhgdfkhgfkghj
+      
         let cityVC = CityVC()
            cityVC.city = city
            navigationController?.pushViewController(cityVC, animated: true)
