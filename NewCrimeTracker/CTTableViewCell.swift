@@ -10,12 +10,32 @@ import UIKit
 
 class CTTableViewCell: UITableViewCell {
     var crimeLabel = UILabel()
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: .default, reuseIdentifier: "myCell")
     }
-
+    init(backgroundColor: UIColor, labelText: String) {
+        super.init(style: .default, reuseIdentifier: "myCell")
+        self.backgroundColor = backgroundColor
+        self.crimeLabel.text = labelText
+        self.addSubview(crimeLabel)
+        NSLayoutConstraint.activate([
+            crimeLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            crimeLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
+            crimeLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 5)
+        ])
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func configure() {
+        
+    }
+   
+    
+   
+    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

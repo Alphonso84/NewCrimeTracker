@@ -19,7 +19,6 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     let poweredByImage = UIImageView()
     let crimeTrackerButton = CTButton(backgroundColor: .systemGray, title: "Get Crime Data")
     var citySelection = UIPickerView()
-    var switchChanged = false
     let myLocation = CLLocationCoordinate2D()
     
 //MARK:- View Lifecycle Methods

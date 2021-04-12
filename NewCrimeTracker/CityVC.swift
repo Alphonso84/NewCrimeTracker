@@ -10,6 +10,10 @@ import UIKit
 import MapKit
 
 
+/*
+ Write short, descriptive, multiword alert titles. The less text people have to read onscreen, the better. Try to craft a title that avoids adding extra text as a message. Because single-word titles rarely provide useful information, consider asking a question or using short sentences. Whenever possible, keep titles to a single line. If the title is a complete sentence, use sentence-style capitalization and appropriate ending punctuation. If the title is a sentence fragment, use title-style capitalization and don’t add ending punctuation.
+ */
+
 class CityVC: UIViewController, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource {
     
  //MARK:- PROPERTIES
@@ -113,12 +117,9 @@ class CityVC: UIViewController, CLLocationManagerDelegate, UITableViewDelegate, 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! CTTableViewCell
-        cell.textLabel?.text = "Hello"
-        cell.textLabel?.textColor = UIColor.systemGray
-        cell.imageView!.image = UIImage(named: "Court")
-        cell.detailTextLabel?.text = "Test"
+        cell.crimeLabel.text = "Hello"
+        cell.crimeLabel.textColor = UIColor.systemGray
         cell.detailTextLabel?.textColor = UIColor.black
-      
         return cell
     }
     
