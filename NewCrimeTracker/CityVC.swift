@@ -10,10 +10,6 @@ import UIKit
 import MapKit
 
 
-/*
- Write short, descriptive, multiword alert titles. The less text people have to read onscreen, the better. Try to craft a title that avoids adding extra text as a message. Because single-word titles rarely provide useful information, consider asking a question or using short sentences. Whenever possible, keep titles to a single line. If the title is a complete sentence, use sentence-style capitalization and appropriate ending punctuation. If the title is a sentence fragment, use title-style capitalization and don’t add ending punctuation.
- */
-
 class CityVC: UIViewController, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource {
     
  //MARK:- PROPERTIES
@@ -50,7 +46,9 @@ class CityVC: UIViewController, CLLocationManagerDelegate, UITableViewDelegate, 
             map.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
             map.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             map.heightAnchor.constraint(equalToConstant: 350),
-            map.widthAnchor.constraint(equalToConstant: 400)])
+            map.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            map.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
         
         let regionRadius: CLLocationDistance = 10000.0
         let region = MKCoordinateRegion(center: cityMapShouldShow().coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
@@ -132,7 +130,6 @@ class CityVC: UIViewController, CLLocationManagerDelegate, UITableViewDelegate, 
         return rowHeight
     }
 }
-
 
 //MARK:- CLASS EXTENSIONS
 extension CityVC: MKMapViewDelegate {
